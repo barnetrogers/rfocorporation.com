@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RFO Corporation</title>
+
+<style>
+
+/* ===== General ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    color: #ffffff;
+    height: 100%;
+}
+
+/* ===== Background Image (South Beach Aerial) ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1535498730771-e735b998cd64");
+    background-size: cover;
+    background-position: center;
+}
+
+/* dark overlay for readability */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+        rgba(10, 30, 70, 0.75),
+        rgba(10, 30, 70, 0.85)
+    );
+}
+
+/* ===== Content ===== */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 20px;
+}
+
+/* Logo */
+.logo {
+    width: 160px;
+    margin-bottom: 25px;
+}
+
+/* Company Name */
+h1 {
+    font-size: 48px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+}
+
+/* Subtitle */
+.tagline {
+    font-size: 20px;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+
+/* Description Box */
+.description {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+    background: rgba(0,0,0,0.35);
+    padding: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(212,175,55,0.5);
+}
+
+/* Button */
+.contact-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0b1f4b;
+    background: linear-gradient(#e7c66a, #cfa73b);
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(#f5d77c, #d4af37);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    color: #cccccc;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hero">
+
+```
+<div class="content">
+
+    <img src="logo.png" class="logo" alt="RFO Corporation Logo">
+
+    <h1>RFO CORPORATION</h1>
+
+    <div class="tagline">
+        A Global Family Office
+    </div>
+
+    <div class="description">
+        RFO Corporation is a single-family office focused on long-term capital
+        allocation into operating businesses and real assets. Our investment
+        activities include acquisitions and partnerships in manufacturing
+        companies, industrial properties, and residential real estate.
+        <br><br>
+        We prioritize disciplined underwriting, operational improvement, and
+        permanent capital partnerships with operators and owners seeking a
+        stable and patient investment partner.
+    </div>
+
+    <a class="contact-btn" href="mailto:barnet@dukestreettrust.com">
+        Contact Us
+    </a>
+
+</div>
+
+<div class="footer">
+    © 2026 RFO Corporation • All Rights Reserved
+</div>
+```
+
+</div>
+
+</body>
+</html>
