@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,60 +8,67 @@
 <style>
 
 /* ===== General ===== */
+* {
+    box-sizing: border-box;
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: "Georgia", serif;
     color: #ffffff;
-    height: 100%;
+    min-height: 100%;
 }
 
-/* ===== Background Image (South Beach Aerial) ===== */
+/* ===== Hero Section ===== */
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px 80px 20px;
     background-image: url("https://images.unsplash.com/photo-1535498730771-e735b998cd64");
     background-size: cover;
     background-position: center;
+    text-align: center;
 }
 
-/* dark overlay for readability */
+/* Overlay */
 .hero::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
     background: linear-gradient(
         rgba(10, 30, 70, 0.75),
         rgba(10, 30, 70, 0.85)
     );
 }
 
-/* ===== Content ===== */
 .content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 20px;
+    max-width: 900px;
+    width: 100%;
 }
 
 /* Logo */
 .logo {
-    width: 160px;
-    margin-bottom: 25px;
+    width: clamp(120px, 20vw, 180px);
+    margin-bottom: 20px;
 }
 
 /* Company Name */
 h1 {
-    font-size: 48px;
+    font-size: clamp(28px, 6vw, 52px);
     letter-spacing: 3px;
     margin: 10px 0;
 }
 
 /* Subtitle */
 .tagline {
-    font-size: 20px;
+    font-size: clamp(16px, 3.5vw, 22px);
     color: #d4af37;
     margin-bottom: 30px;
 }
@@ -71,10 +77,10 @@ h1 {
 .description {
     max-width: 700px;
     margin: auto;
-    font-size: 18px;
+    font-size: clamp(15px, 2.8vw, 18px);
     line-height: 1.7;
     background: rgba(0,0,0,0.35);
-    padding: 28px;
+    padding: 24px;
     border-radius: 8px;
     border: 1px solid rgba(212,175,55,0.5);
 }
@@ -84,14 +90,14 @@ h1 {
     display: inline-block;
     margin-top: 35px;
     padding: 14px 28px;
-    font-size: 18px;
+    font-size: clamp(15px, 3vw, 18px);
     text-decoration: none;
     color: #0b1f4b;
     background: linear-gradient(#e7c66a, #cfa73b);
     border-radius: 6px;
     font-weight: bold;
     letter-spacing: 1px;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 .contact-btn:hover {
@@ -101,54 +107,67 @@ h1 {
 
 /* Footer */
 .footer {
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 60px;
     font-size: 13px;
     color: #cccccc;
 }
 
-</style>
+/* ===== Small Device Fine-Tuning ===== */
+@media (max-width: 480px) {
 
+    .hero {
+        padding: 30px 16px 60px 16px;
+    }
+
+    .description {
+        padding: 18px;
+    }
+
+    .contact-btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="hero">
 
-```
-<div class="content">
+    <div class="content">
 
-    <img src="logo.png" class="logo" alt="RFO Corporation Logo">
+        <img src="logo.png" class="logo" alt="RFO Corporation Logo">
 
-    <h1>RFO CORPORATION</h1>
+        <h1>RFO CORPORATION</h1>
 
-    <div class="tagline">
-        A Global Family Office
+        <div class="tagline">
+            A Global Family Office
+        </div>
+
+        <div class="description">
+            RFO Corporation is a single-family office focused on long-term capital
+            allocation into operating businesses and real assets. Our investment
+            activities include acquisitions and partnerships in manufacturing
+            companies, industrial properties, and residential real estate.
+            <br><br>
+            We prioritize disciplined underwriting, operational improvement, and
+            permanent capital partnerships with operators and owners seeking a
+            stable and patient investment partner.
+        </div>
+
+        <a class="contact-btn" href="mailto:barnet@dukestreettrust.com">
+            Contact Us
+        </a>
+
+        <div class="footer">
+            © 2026 RFO Corporation • All Rights Reserved
+        </div>
+
     </div>
-
-    <div class="description">
-        RFO Corporation is a single-family office focused on long-term capital
-        allocation into operating businesses and real assets. Our investment
-        activities include acquisitions and partnerships in manufacturing
-        companies, industrial properties, and residential real estate.
-        <br><br>
-        We prioritize disciplined underwriting, operational improvement, and
-        permanent capital partnerships with operators and owners seeking a
-        stable and patient investment partner.
-    </div>
-
-    <a class="contact-btn" href="mailto:barnet@dukestreettrust.com">
-        Contact Us
-    </a>
-
-</div>
-
-<div class="footer">
-    © 2026 RFO Corporation • All Rights Reserved
-</div>
-```
 
 </div>
 
